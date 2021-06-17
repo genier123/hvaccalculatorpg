@@ -1,0 +1,225 @@
+h2{
+    padding: 0% 0% 0% 1%;
+    
+    }
+    .slidecontainer {
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      width: 99%;
+      height: 15px;
+      background: lightgray;
+      outline: black;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+
+    /*--------------------------Slider 2-------------------------*/
+    
+    .slidecontainer2 {
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    }
+    
+    .slider2 {
+      -webkit-appearance: none;
+      width: 99%;
+      height: 15px;
+      background: lightgray;
+      outline: black;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider2:hover {
+      opacity: 1;
+    }
+    
+    .slider2::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+    
+    .slider2::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+    
+    /*--------------------------Slider 3-------------------------*/
+    
+    .slidecontainer3 {
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    }
+    
+    .slider3 {
+      -webkit-appearance: none;
+      width: 99%;
+      height: 15px;
+      background: lightgray;
+      outline: black;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider3:hover {
+      opacity: 1;
+    }
+    
+    .slider3::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+    
+    .slider3::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+    
+    /*--------------------------Slider 4-------------------------*/
+    
+    .slidecontainer4 {
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    }
+    
+    .slider4 {
+      -webkit-appearance: none;
+      width: 99%;
+      height: 15px;
+      background: lightgray;
+      outline: black;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider4:hover {
+      opacity: 1;
+    }
+    
+    .slider4::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+    
+    .slider4::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #3c89e0;
+      cursor: pointer;
+    }
+    
+    /*--------------------------common-------------------------*/
+    
+    hr {
+      border:none;
+      border-top:1px dotted rgb(98, 122, 233);
+      color:#fff;
+      background-color:#fff;
+      width:100%;  
+      padding: 0% 0% 0% 0%;
+    }
+    
+    body {
+      background-color: #97d9f8, #3c89e0;
+      font-family: sans-serif;
+      padding: 1% 1% 1% 1%;
+     }
+     
+     #oultine1 {
+      border:darkblue solid thin;
+      border-radius: 2px;
+      background-color:ghostwhite;
+     }
+    
+     #values1 {
+      text-align: center;
+      font-size: large;
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    }
+
+    #oultine2 {
+      border:darkblue solid thin;
+      border-radius: 2px;
+      background-color:ghostwhite;
+     }
+    
+    #values2 {
+      text-align: center;
+      font-size: large;
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    
+    }
+    
+    #oultine3 {
+      border:darkblue solid thin;
+      border-radius: 2px;
+      background-color:ghostwhite;
+     }
+    
+    #values3 {
+      text-align: center;
+      font-size: large;
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    
+    }
+
+    #oultine4 {
+      border:darkblue solid thin;
+      border-radius: 2px;
+      background-color:ghostwhite;
+     }
+    
+    #values4 {
+      text-align: center;
+      font-size: large;
+      width: 100%;
+      padding: 0% 0% 0% 0%;
+    
+    }

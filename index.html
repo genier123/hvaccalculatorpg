@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+</head>
+<body>
+    <h1>Calculate Common HVAC Values</h1>
+    <div id="oultine1">
+      <h2><u>Convert Deg F to Deg C</u></h2>
+      <hr>
+        <div class="slidecontainer">
+          <input type="range" step="0.1" min="-50" max="250" value="65" class="slider" id="myRange">
+        </div>
+        <div id="values1">
+          <b>Deg F:</b>&nbsp;<span id="degF"></span><b>˚</b><span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>
+          </span>&nbsp;<b>Deg C:</b>&nbsp;<span id="degC"></span><b>˚</b><span></span>
+        </div>
+        <hr>
+      </div>
+<br>
+      <div id="oultine2">
+        <h2><u>Convert Deg C to Deg F</u></h2>
+        <hr>
+          <div class="slidecontainer2">
+            <input type="range" step="0.1" min="-150" max="250" value="65" class="slider2" id="myRange2">
+          </div>
+          <div id="values2">
+            <b>Deg C:</b>&nbsp;<span id="degC2"></span><b>˚</b><span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>
+            </span>&nbsp;<b>Deg F:</b>&nbsp;<span id="degF2"></span><b>˚</b><span></span>
+          </div>
+          <hr>
+        </div>
+<br>
+      <div id="oultine3">
+        <h2><u>Convert FPM to CFM</u></h2>
+        <hr>
+        <div id="values3">
+          <div class="slidecontainer3">
+            <input type="range" step="0.1" min="0" max="2000" value="500" class="slider3" id="myRange3">
+            <br>
+            <b>Velocity:</b>&nbsp;<span id="fpm1"></span>&nbsp;<b>ft/m</b>
+          </div>
+          <div class="slidecontainer4">
+            <input type="range" step="0.01" min="0" max="25" value="10" class="slider4" id="myRange4">
+            <br>
+            <b>Area:</b>&nbsp;<span id="area1"></span>&nbsp;<b>ft2</b>
+          </div>
+          <br>
+            </span><b>Calculated CFM:</b>&nbsp;<span id="cfm1"></span><b></b></span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>
+          <hr>
+        </div>
+      </div>
+<br>
+      <div id="oultine4">
+        <h2><u>Calulate Tonnage</u></h2>
+        <hr>
+        <div id="values4">
+          <div class="slidecontainer5">
+            <input type="range" step="0.5" min="0" max="15000" value="500" class="slider5" id="myRange5">
+            <br>
+            <b>Gallons Per Minute:</b>&nbsp;<span id="gpm1"></span>&nbsp;<b>gpm</b>
+            </div>
+          <div class="slidecontainer6">
+            <input type="range" min="0" max="50" value="10" step="0.1" class="slider6" id="myRange6">
+            <br>
+            <b>Delta T:</b>&nbsp;<span id="delta1"></span>&nbsp;<b>Deg F</b>
+          </div>
+          <br>
+            </span><b>Tonnage:</b></span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>&nbsp;<span id="tonnage1"></span><span>Tons</span>
+          <hr>
+        </div>
+      </div>
+      <script src="./script.js"></script>
+</body>
+</html>
