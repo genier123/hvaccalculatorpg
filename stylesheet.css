@@ -196,15 +196,13 @@
 
     h2{
       padding-left: 1%;
+      text-shadow: 2px 2px 3px gray;
     }
     
     hr {
       border:none;
-      border-top:1px dotted rgb(98, 122, 233);
-      color:#fff;
-      background-color:#fff;
-      width:100%;  
-      padding: 0% 0% 0% 0%;
+      border-top:1px dotted white;
+      width:100%;
     }
     
     body {
@@ -218,15 +216,12 @@
       border-radius: 2px;
       background-color:ghostwhite;
       box-shadow: 2px 2px 5px gray;
-     }
-    
-     #values1 {
       text-align: center;
       font-size: large;
       width: 100%;
-      padding: 0% 0% 0% 0%;
-    }
-
+      padding-bottom: 10px;
+     }
+    
     #oultine2 {
       border:darkblue solid thin;
       border-radius: 2px;
@@ -272,7 +267,7 @@
     
     }
 
-.pipeanimate1 {
+    /*---------.pipeanimate1 {
   width: 100%;
   height: 10px;
   border-radius: 3px;
@@ -303,4 +298,4 @@
   90%   {background-color:whitesmoke; left:0px; top:0px;}
   95%   {background-color:lightskyblue; left:2000px; top:0px;}
   100%   {background-color:whitesmoke; left:0px; top:0px;}
-}
+}------*/

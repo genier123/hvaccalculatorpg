@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./stylesheet.css">
 <body>
-<!-- The navigation menu -->
+<head></head>
     <div class="navbar">
       <a class="active" href="#">Home</a>
       <a href="./aircalc.html">Air</a>
@@ -17,34 +17,38 @@
   <br>
   <br>
   <br>
-  <span><h1><i>Common HVAC Formulas</i></h1></span><span><div class="pipeanimate1"></div></span>
-  <br>  
+  <span><h1><i>CommonConversions.com</i></h1></span>
+  <span><div class="pipeanimate1"></div></span>
+  <br>
   <div id="oultine1">
-      <h2><u>Convert Deg F to Deg C</u></h2>
+    <h2><u>Temperature Conversions</u></h2>
+        &nbsp;<label>Fahrenheit:</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+        oninput="TempConverter(this.value)"
+        onchange="TempConverter(this.value)" step=".1" min="-50" max="250" value="65"><span>&nbsp;<b>˚</b></span>
       <hr>
-        <div class="slidecontainer">
-          <input type="range" step="0.1" min="-50" max="250" value="65" class="slider" id="myRange">
-        </div>
-        <div id="values1">
-          <b>Deg F:</b>&nbsp;<span id="degF"></span><b>˚</b><span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>
-          </span>&nbsp;<b>Deg C:</b>&nbsp;<span id="degC"></span><b>˚</b><span></span>
-        </div>
-        <hr>
-      </div>
-<br>
-      <div id="oultine2">
-        <h2><u>Convert Deg C to Deg F</u></h2>
-        <hr>
-          <div class="slidecontainer2">
-            <input type="range" step="0.1" min="-150" max="250" value="65" class="slider2" id="myRange2">
-          </div>
-          <div id="values2">
-            <b>Deg C:</b>&nbsp;<span id="degC2"></span><b>˚</b><span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>
-            </span>&nbsp;<b>Deg F:</b>&nbsp;<span id="degF2"></span><b>˚</b><span></span>
-          </div>
-          <hr>
-        </div>
-<br>
+        &nbsp;Celsius:&nbsp;<span id= "outputCelsius"></span>&nbsp;<b>˚</b>
+      <hr>
+        &nbsp;Kelvin:&nbsp;<span id= "outputKelvin"></span>&nbsp;<b>˚</b>
+      <br>
+  </div>
+  <br>
+  <div id="oultine1">
+    <h2><u>Calculate Dewpoint</u></h2>
+    &nbsp;<label>Temperature Deg F:</label>
+    <input id="inputFahrenheit2" type="number" placeholder="Fahrenheit2"
+    oninput="dewPointCalc(this.value)"
+    onchange="dewPointCalc(this.value)" step=".1" min="-50" max="250" value="70"><span>&nbsp;<b>˚</b></span>
+  <hr>
+    &nbsp;<label>Relative Humidity:</label>
+    <input id="relativeHumidity" type="number" placeholder="Humidity"
+    oninput="dewPointCalc(this.value)"
+    onchange="dewPointCalc(this.value)" step=".1" min="0" max="100" value="40"><span>&nbsp;<b>˚</b></span>  
+  <hr>
+    &nbsp;Dewpoint Temp:&nbsp;<span id= "outputDewpoint"></span>&nbsp;<b>˚</b>
+  <br>
+  </div>
+  <br>
       <div id="oultine3">
         <h2><u>Convert FPM to CFM</u></h2>
         <hr>
@@ -66,7 +70,7 @@
       </div>
 <br>
       <div id="oultine4">
-        <h2><u>Calulate Tonnage</u></h2>
+        <h2><u>Chiller Tons</u></h2>
         <hr>
         <div id="values4">
           <div class="slidecontainer5">
@@ -80,7 +84,7 @@
             <b>Delta T:</b>&nbsp;<span id="delta1"></span>&nbsp;<b>Deg F</b>
           </div>
           <br>
-            </span><b>Tonnage:</b></span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>&nbsp;<span id="tonnage1"></span><span>Tons</span>
+            </span><b>Tonnage:</b></span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>&nbsp;<span id="tonnage1"></span>&nbsp;<span>Tons</span>
           <hr>
         </div>
       </div>

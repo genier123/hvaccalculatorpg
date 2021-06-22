@@ -1,52 +1,3 @@
-var slider = document.getElementById("myRange");
-var output = document.getElementById("degF");
-
-output.innerHTML = slider.value;
-
-slider.oninput = function () {
-  output.innerHTML = this.value;
-}
-
-function decimal1(){
-decimal = document.getElementsBy("myRange");
-return decimal.toFixed(1);
-}
-
-function degCelConv() {
-
-  var f = document.getElementById("myRange").value;
-  
-  var c = (f - 32) / 1.8;
-  
-  return c.toFixed(1);
-
-}
-
-document.getElementById("degC").innerHTML = degCelConv();
-
-//----------------------------------------------------//
-
-var slider2 = document.getElementById("myRange2");
-var output2 = document.getElementById("degC2");
-
-output2.innerHTML = slider2.value;
-
-slider2.oninput = function () {
-  output2.innerHTML = this.value;
-}
-
-function degCconv() {
-
-  var y = document.getElementById("myRange2").value;
-  
-  var x = (1.8 * y) + 32;
-  
-  return x.toFixed(1);
-
-}
-
-document.getElementById("degF2").innerHTML = degCconv();
-
 //----------------------------------------------------//
 
 var slider3 = document.getElementById("myRange3");
@@ -126,3 +77,54 @@ document.getElementById("tonnage1").innerHTML = tonsConv();
 function refreshPage(){
   window.location.reload();
 } 
+
+//----------------------------------------------------//
+
+//function temperatureConverter(valNum) {
+//  valNum = parseFloat(valNum);
+//  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+
+//}
+
+function TempConverter() {
+
+  var f = document.getElementById("inputFahrenheit").value;
+  
+  var c = (f - 32) / 1.8;
+  
+  document.getElementById("outputCelsius").innerHTML = c.toFixed(1);
+
+  var f = document.getElementById("inputFahrenheit").value;
+  
+  var k = ((f-32)/1.8)+273.15;
+  
+  document.getElementById("outputKelvin").innerHTML = k.toFixed(1);
+  
+}
+
+//----------------------------------------------------//
+
+function getNatLog1() {
+
+  return Math.relHum/100;
+
+}
+
+
+function dewPointCalc(){
+
+  var l = 2453000;
+
+  var rv = 461;
+
+  var tempDry = document.getElementById("inputFahrenheit2").value;
+  
+  var relHum = document.getElementById("relativeHumidity").value;
+
+  var ln = (es/6.11) = (l/rv )(1/273 - 1/tempDry);
+
+  tempDew = (237.3 * ln(relHum/100) + ((17.27 * tempDry) / (237.3+tempDry))) / (17.27 - ln(relHum/100) + ((17.27 * tempDry) / (237.3 + tempDry)));
+
+  document.getElementById("outputDewpoint").innerHTML = tempDew.toFixed(1);
+
+}
