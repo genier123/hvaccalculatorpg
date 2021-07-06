@@ -48,15 +48,17 @@
         <br>
         <div id="values3">
           <div class="slidecontainer3">
+            <b>Velocity:</b>&nbsp;<span id="fpm1"></span>&nbsp;<b>ft/m</b>
+            <br>
             <input type="range" step="0.1" min="0" max="2000" value="500" class="slider3" id="myRange3">
             <br>
-            <b>Velocity:</b>&nbsp;<span id="fpm1"></span>&nbsp;<b>ft/m</b>
           </div>
           <br>
           <div class="slidecontainer4">
+            <b>Area:</b>&nbsp;<span id="area1"></span>&nbsp;<b>ft2</b>
+            <br>
             <input type="range" step="0.01" min="0" max="5" value="2" class="slider4" id="myRange4">
             <br>
-            <b>Area:</b>&nbsp;<span id="area1"></span>&nbsp;<b>ft2</b>
           </div>
           <br>
             </span><b>Calculated CFM:</b>&nbsp;<span id="cfm1"></span><b></b></span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>
@@ -66,22 +68,26 @@
       </div>
   <br>
       <div id="oultine1">
+        <br>
         <h2><u>Chiller Tons</u></h2>
-        <hr>
+        <br>
         <div id="values4">
           <div class="slidecontainer5">
+            <b>Gallons Per Minute:</b>&nbsp;<span id="gpm1"></span>&nbsp;<b>gpm</b>
+            <br>
             <input type="range" step="0.5" min="0" max="15000" value="500" class="slider5" id="myRange5">
             <br>
-            <b>Gallons Per Minute:</b>&nbsp;<span id="gpm1"></span>&nbsp;<b>gpm</b>
+            <br>
             </div>
           <div class="slidecontainer6">
-            <input type="range" min="0" max="50" value="10" step="0.1" class="slider6" id="myRange6">
-            <br>
             <b>Delta T:</b>&nbsp;<span id="delta1"></span>&nbsp;<b>Deg F</b>
+            <br>
+            <input type="range" min="0" max="50" value="10" step="0.1" class="slider6" id="myRange6">
           </div>
           <br>
             </span><b>Tonnage:</b></span>&nbsp;<button type="submit" onClick="refreshPage()">Update</button>&nbsp;<span id="tonnage1"></span>&nbsp;<span>Tons</span>
-          <hr>
+            <br>
+            <br>
         </div>
       </div>
 </p>
