@@ -7,49 +7,42 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./stylesheet.css">
 <body>
-<head></head>
-    <div class="navbar">
-      <a class="active" href="#">Home</a>
-      <a href="./aircalc.html">Air</a>
-      <a href="#">Hydronic</a>
-      <a href="#">Electrical</a>
+  <div class= "titleFlex">
+  <span>
+    <div class="mainTitle">
+      HVAC-Calcs.com
     </div>
-  <br>
-  <br>
-  <br>
-  <span><h1><i>CommonConversions.com</i></h1></span>
-  <span><div class="pipeanimate1"></div></span>
-  <br>
+  </span>
+  <span>
+   <div class="topnav" id="myTopnav">
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#home" class="active">Home</a>
+  </div>
+  </span>
+</div>
+<h2><u>HVAC Conversions</u></h2>
+<p>
   <div id="oultine1">
-    <h2><u>Temperature Conversions</u></h2>
+    <br>
+    <h3>Convert Temperatures</h3>
+    <br>
         &nbsp;<label>Fahrenheit:</label>
         <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
         oninput="TempConverter(this.value)"
         onchange="TempConverter(this.value)" step=".1" min="-50" max="250" value="65"><span>&nbsp;<b>˚</b></span>
-      <hr>
-        &nbsp;Celsius:&nbsp;<span id= "outputCelsius"></span>&nbsp;<b>˚</b>
-      <hr>
+        <br>
+        <br>
+          &nbsp;Celsius:&nbsp;<span id= "outputCelsius"></span>&nbsp;<b>˚</b>
+        <br>
+        <br>
         &nbsp;Kelvin:&nbsp;<span id= "outputKelvin"></span>&nbsp;<b>˚</b>
-      <br>
+        <br>
+        <br>
   </div>
   <br>
-  <div id="oultine1">
-    <h2><u>Calculate Dewpoint</u></h2>
-    &nbsp;<label>Temperature Deg F:</label>
-    <input id="inputFahrenheit2" type="number" placeholder="Fahrenheit2"
-    oninput="dewPointCalc(this.value)"
-    onchange="dewPointCalc(this.value)" step=".1" min="-50" max="250" value="70"><span>&nbsp;<b>˚</b></span>
-  <hr>
-    &nbsp;<label>Relative Humidity:</label>
-    <input id="relativeHumidity" type="number" placeholder="Humidity"
-    oninput="dewPointCalc(this.value)"
-    onchange="dewPointCalc(this.value)" step=".1" min="0" max="100" value="40"><span>&nbsp;<b>˚</b></span>  
-  <hr>
-    &nbsp;Dewpoint Temp:&nbsp;<span id= "outputDewpoint"></span>&nbsp;<b>˚</b>
-  <br>
-  </div>
-  <br>
-      <div id="oultine3">
+      <div id="oultine1">
         <h2><u>Convert FPM to CFM</u></h2>
         <hr>
         <div id="values3">
@@ -68,8 +61,8 @@
           <hr>
         </div>
       </div>
-<br>
-      <div id="oultine4">
+  <br>
+      <div id="oultine1">
         <h2><u>Chiller Tons</u></h2>
         <hr>
         <div id="values4">
@@ -88,6 +81,7 @@
           <hr>
         </div>
       </div>
+</p>
 <script src="./script.js"></script>
 </body>
 </html>

@@ -104,27 +104,3 @@ function TempConverter() {
 
 //----------------------------------------------------//
 
-function getNatLog1() {
-
-  return Math.relHum/100;
-
-}
-
-
-function dewPointCalc(){
-
-  var l = 2453000;
-
-  var rv = 461;
-
-  var tempDry = document.getElementById("inputFahrenheit2").value;
-  
-  var relHum = document.getElementById("relativeHumidity").value;
-
-  var ln = (es/6.11) = (l/rv )(1/273 - 1/tempDry);
-
-  tempDew = (237.3 * ln(relHum/100) + ((17.27 * tempDry) / (237.3+tempDry))) / (17.27 - ln(relHum/100) + ((17.27 * tempDry) / (237.3 + tempDry)));
-
-  document.getElementById("outputDewpoint").innerHTML = tempDew.toFixed(1);
-
-}
