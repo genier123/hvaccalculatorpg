@@ -1,5 +1,41 @@
 //----------------------------------------------------//
 
+//function temperatureConverter(valNum) {
+//  valNum = parseFloat(valNum);
+//  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+
+//}
+
+function TempConverter() {
+
+  var f = document.getElementById("inputFahrenheit").value;
+  
+  var c = (f - 32) / 1.8;
+  
+  document.getElementById("outputCelsius").innerHTML = c.toFixed(1);
+
+  var f = document.getElementById("inputFahrenheit").value;
+  
+  var k = ((f-32)/1.8)+273.15;
+  
+  document.getElementById("outputKelvin").innerHTML = k.toFixed(1);
+  
+}
+
+//----------------------------------------------------//
+function CfmConverter() {
+
+  var vel = document.getElementById("velocity2").value;
+
+  var area = document.getElementById("area2").value;
+  
+  var cfm  = vel * area;
+  
+  document.getElementById("cfm1").innerHTML = cfm.toFixed(1);
+
+}
+//----------------------------------------------------//
+
 var slider3 = document.getElementById("myRange3");
 var output3 = document.getElementById("fpm1");
 
@@ -77,29 +113,3 @@ document.getElementById("tonnage1").innerHTML = tonsConv();
 function refreshPage(){
   window.location.reload();
 } 
-
-//----------------------------------------------------//
-
-//function temperatureConverter(valNum) {
-//  valNum = parseFloat(valNum);
-//  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
-
-//}
-
-function TempConverter() {
-
-  var f = document.getElementById("inputFahrenheit").value;
-  
-  var c = (f - 32) / 1.8;
-  
-  document.getElementById("outputCelsius").innerHTML = c.toFixed(1);
-
-  var f = document.getElementById("inputFahrenheit").value;
-  
-  var k = ((f-32)/1.8)+273.15;
-  
-  document.getElementById("outputKelvin").innerHTML = k.toFixed(1);
-  
-}
-
-//----------------------------------------------------//
