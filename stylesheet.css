@@ -14,8 +14,6 @@ header{
 h2 {
   padding-left: 1%;
   text-shadow: 1px 1px 2px gray;
-  font-size: x-large;
-
 }
 
 @media screen and (max-width: 812px) {
@@ -38,6 +36,26 @@ h3 {
   font-style: italic;
   padding-top: 8px;
   padding-bottom: 5px;
+  text-shadow: 1px 1px 1px grey;
+  color: darkslategray;
+}
+
+.mainFooter{
+  background-color: whitesmoke;
+  font-size: xx-small;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-shadow: 1px 1px 1px grey;
+  color: darkslategray;
+  box-shadow: 1px 1px 3px darkslategrey;
+}
+
+body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd2v9y0dukr6mq2.cloudfront.net%2Fvideo%2Fthumbnail%2FitCjTBE%2Flight-green-bright-abstract-squares-tech-background-seamless-loop-design-video-animation-hd-1920x1080_41vy-tjhl__F0007.png&f=1&nofb=1");
+  font-family: sans-serif;
+  padding: 1% 1% 1% 1%;
 }
 
 /* Add a black background color to the top navigation */
@@ -88,7 +106,7 @@ h3 {
 
 #oultine1 {
   background-color: white;
-  box-shadow: 1px 1px 4px 1px darkslategrey;
+  box-shadow: 1px 1px 3px darkslategrey;
   font-size: large;
   max-width: 812px;
   text-align: center;
@@ -103,211 +121,3 @@ h3 {
     text-align: center; /* If you want the text to be left-aligned on small screens */
   }
 }
-
-/*-----------------------------------------*/  
-.slidecontainer {
-  width: 100%;
-  padding: 0% 0% 0% 0%;
-}
-    
-.slider {
-  -webkit-appearance: none;
-  width: 99%;
-  background: lightgray;
-  outline: black;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-    
-.slider:hover {
-  opacity: 1;
-}
-    
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #3c89e0;
-  cursor: pointer;
-}
-    
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #3c89e0;
-  cursor: pointer;
-}
-
-/*--------------------------Slider 2-------------------------*/
-    
-    .slidecontainer2 {
-      width: 100%;
-      padding: 0% 0% 0% 0%;
-    }
-    
-    .slider2 {
-      -webkit-appearance: none;
-      width: 99%;
-      background: lightgray;
-      outline: black;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
-    }
-    
-    .slider2:hover {
-      opacity: 1;
-    }
-    
-    .slider2::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      background: #3c89e0;
-      cursor: pointer;
-    }
-    
-    .slider2::-moz-range-thumb {
-      width: 25px;
-      height: 25px;
-      background: #3c89e0;
-      cursor: pointer;
-    }
-    
-    /*--------------------------Slider 3-------------------------*/
-    
-    .slidecontainer3 {
-      width: 100%;
-    }
-    
-    .slider3 {
-      -webkit-appearance: none;
-      width: 99%;
-      height: 10px;
-      background: lightgray;
-      outline: black;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
-    }
-    
-    .slider3:hover {
-      opacity: 1;
-    }
-    
-    .slider3::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 15px;
-      height: 15px;
-      background: #3c89e0;
-      cursor: pointer;
-    }
-    
-    .slider3::-moz-range-thumb {
-      width: 15px;
-      height: 20px;
-      background: #3c89e0;
-      cursor: grab;
-    }
-    
-    /*--------------------------Slider 4-------------------------*/
-    
-    .slidecontainer4 {
-      width: 100%;
-      padding: 0% 0% 0% 0%;
-    }
-    
-    .slider4 {
-      -webkit-appearance: none;
-      width: 99%;
-      height: 10px;
-      background: lightgray;
-      outline: black;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
-    }
-    
-    .slider4:hover {
-      opacity: 1;
-    }
-    
-    .slider4::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      background: #3c89e0;
-      cursor: pointer;
-    }
-    
-    .slider4::-moz-range-thumb {
-      width: 15px;
-      height: 20px;
-      background: #3c89e0;
-      cursor: pointer;
-    }
-    
-  
-    
-  hr {
-      color: lightsteelblue;
-      width:100%;
-  
-  }
-    
-  body {
-      background-color: #97d9f8, #3c89e0;
-      font-family: sans-serif;
-      padding: 1% 1% 1% 1%;
-     }
-     
-    
-    #oultine2 {
-      border:darkblue solid thin;
-      border-radius: 2px;
-      background-color:ghostwhite;
-      box-shadow: 2px 2px 5px gray;
-     }
-    
-    #values2 {
-      text-align: center;
-      font-size: large;
-      width: 100%;
-      padding: 0% 0% 0% 0%;
-    
-    }
-    
-    #oultine3 {
-      border:darkblue solid thin;
-      border-radius: 2px;
-      background-color:ghostwhite;
-      box-shadow: 2px 2px 5px gray;
-     }
-    
-    #values3 {
-      text-align: center;
-      font-size: large;
-      width: 100%;
-      padding: 0% 0% 0% 0%;
-    
-    }
-
-    #oultine4 {
-      border:darkblue solid thin;
-      border-radius: 2px;
-      background-color:ghostwhite;
-      box-shadow: 2px 2px 5px gray;
-     }
-    
-    #values4 {
-      text-align: center;
-      font-size: large;
-      width: 100%;
-      padding: 0% 0% 0% 0%;
-    
-    }

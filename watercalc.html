@@ -5,17 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="./watercalc.css">
+</head>
 <body>
-<!-- The navigation menu -->
-    <div class="navbar">
-      <a href="./index.html">Home</a>
-      <a class="active" href="aircalc.html">Air</a>
-      <a href="./watercalc.html">Hydronic</a>
-      <a href="electriccalc.html">Electrical</a>
+  <div class= "titleFlex">
+  <span>
+    <div class="mainTitle">
+      GeniersTools.com
     </div>
-  <br>
-  <br>
-  <br>
-  <span><h1><i>Airflow Formulas</i></h1></span><span><div class="pipeanimate1"></div></span>
-  <br> 
+  </span>
+  <span>
+    <div class="topnav" id="myTopnav">
+      <a href="./index.html">Basic</a>
+      <a href="#water"class="active">Hyrdonic Calculators</a>
+      <a href="#contact">Electrical Calculators</a>
+      <a href="#about">Other Calculators</a>
+    </div>
+  </span>
+  </div>
+  <h2><u>Typical Hydronic Calculations</u></h2>
+<p>
+  <div id="oultine1">
+    <br>
+      <h3>Calculate Chiller Tonnage</h3>
+    <br>
+      &nbsp;<label><b>GPM:</b></label>
+      <input id="myGpm1" type="number" placeholder=""
+      oninput="tonsConv(this.value)"
+      onchange="tonsConv(this.value)" step=".5" min="0" max="5000" value="500"><span>&nbsp;<b>gpm</b></span>
+    <br>
+    <br>
+      &nbsp;<label><b>Delta T:</b></label><b></b>
+      <input id="myDeltaT1" type="number" placeholder=""
+      oninput="tonsConv(this.value)"
+      onchange="tonsConv(this.value)" step="0.1" min="0" max="20" value="8"><span>&nbsp;<b>˚</b></span>
+    <br>
+    <br>
+      &nbsp;<b>Calculated Tonnage:</b>&nbsp;<span id= "myTons1"></span>&nbsp;<b>Tons</b>
+    <br>
+    <br>
+  </div>
+</p>
+<div class ="mainFooter">
+  About
+</div>
+<br>
+<script src="./watercalc.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@ function TempConverter() {
   
 }
 
-//----------------------------------------------------//
+//----------------------CFM Convertor------------------------------//
 function CfmConverter() {
 
   var vel = document.getElementById("velocity2").value;
@@ -34,6 +34,7 @@ function CfmConverter() {
   document.getElementById("cfm1").innerHTML = cfm.toFixed(1);
 
 }
+
 //----------------------------------------------------//
 
 var slider3 = document.getElementById("myRange3");
@@ -92,21 +93,6 @@ slider6.oninput = function () {
   output6.innerHTML = this.value;
 
 }
-
-//------//
-function tonsConv() {
-
-  var gpm = document.getElementById("myRange5").value;
-
-  var delt = document.getElementById("myRange6").value;
-  
-  var tons  = gpm * delt * 500 / 12000;
-  
-  return tons.toFixed(1);
-
-}
-
-document.getElementById("tonnage1").innerHTML = tonsConv();
 
 //----------------------------------------------------//
 
