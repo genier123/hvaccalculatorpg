@@ -58,16 +58,12 @@ body {
   padding: 1% 1% 1% 1%;
 }
 
-/* Add a black background color to the top navigation */
+/*-----------------outline1------------------------*/ 
+
 .topnav {
   overflow: hidden;
   border-radius: 2px;
   box-shadow: 1px 1px 2px grey;
-}
-
-/* Style the links inside the navigation bar */
-.topnav {
-  overflow: hidden;
   background-color: black;
 }
 
