@@ -7,64 +7,98 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./stylesheet.css">
 <body>
-  <div class= "titleFlex">
-  <span>
-    <div class="mainTitle">
-      GeniersTools.com
-    </div>
-  </span>
-  <span>
-   <div class="topnav" id="myTopnav">
+  <div class="mainTitle">
+    GeniersTools.com
+  </div>
+  <div class="scrollmenu">
     <a href="#home" class="active">Basic</a>
     <a href="./watercalc.html">Hyrdonic Calculators</a>
     <a href="./electriccalc.html">Electrical Calculators</a>
     <a href="#about">Other Calculators</a>
   </div>
-  </span>
-</div>
 <h2><u>Typical Air Calculations</u></h2>
 <p>
   <div id="oultine1">
     <br>
-    <h3>Convert Temperatures</h3>
+      <h3>Convert Temperatures</h3>
     <br>
         &nbsp;<label>Fahrenheit:</label>
         <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
         oninput="TempConverter(this.value)"
         onchange="TempConverter(this.value)" step=".1" min="-50" max="250" value="65"><span>&nbsp;<b>˚</b></span>
-        <br>
-        <br>
-          &nbsp;Celsius:&nbsp;<span id= "outputCelsius"></span>&nbsp;<b>˚</b>
-        <br>
-        <br>
-        &nbsp;Kelvin:&nbsp;<span id= "outputKelvin"></span>&nbsp;<b>˚</b>
-        <br>
-        <br>
+      <br>
+      <br>
+          &nbsp;<b>Celsius:</b>&nbsp;<span id= "outputCelsius"></span>&nbsp;<b>˚</b>
+      <br>
+      <br>
+        &nbsp;<b>Kelvin:</b>&nbsp;<span id= "outputKelvin"></span>&nbsp;<b>˚</b>
+      <br>
+      <br>
   </div>
-  <br>
-      <div id="oultine1">
-        <br>
+<br>
+    <div id="oultine1">
+      <br>
         <h3>Convert FPM to CFM</h3>
-        <br>
+      <br>
         &nbsp;<label>Velocity Pressure:</label>
         <input id="velocity2" type="number" placeholder=""
         oninput="CfmConverter(this.value)"
-        onchange="CfmConverter(this.value)" step=".1" min="0" max="2000" value="500"><span>&nbsp;<b>ft/m</b></span>
-        <br>
-        <br>
+        onchange="CfmConverter(this.value)" step=".1" min="0" max="2000" value="500"><span>&nbsp;ft/m</span>
+      <br>
+      <br>
         &nbsp;<label>Area:</label>
         <input id="area2" type="number" placeholder=""
         oninput="CfmConverter(this.value)"
-        onchange="CfmConverter(this.value)" step="0.01" min="0" max="5" value=".8"><span>&nbsp;<b>ft2</b></span>
-        <br>
-        <br>
-        &nbsp;<b>Calculated CFM:</b>&nbsp;<span id= "cfm1"></span>&nbsp;<b>cfm</b>
-        <br>
-        <br>
-      </div>
+        onchange="CfmConverter(this.value)" step="0.01" min="0" max="5" value=".8"><span>&nbsp;ft2</span>
+      <br>
+      <br>
+          &nbsp;<b>Calculated CFM:</b>&nbsp;<span id= "cfm1"></span>&nbsp;cfm
+      <br>
+      <br>
+    </div>
 </p>
 <div class ="mainFooter">
-  About
+  <div class="footerContent1">
+    <div>
+      <span>© Geniers Calculators</span>
+      <span>&nbsp;</span>
+      <span>|</span>
+      <span>&nbsp;</span>
+    </div>
+    <div>
+      <span>patrickjgenier@gmail.com</span>
+      <span>&nbsp;</span>
+      <span>|</span>
+      <span>&nbsp;</span>
+    </div>
+    <div>
+      <span>
+        <div class="socialIcons">
+          <div>
+            <a href="https://www.instagram.com/iampatg/">
+              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746__340.png">
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/iampatg/">
+              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/23/02/32/instagram-2433265__340.png">
+            </a>
+          </div>
+          <div>
+            <a href="https://www.twitter.com/iampatg/">
+              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/14/23/twitter-2430933__340.png">
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/patrickgenier/">
+              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/27/04/57/linkedin-2446228__340.png">
+            </a>
+          </div>
+        </div>
+    </div>
+      </span>
+    </div>
+  </div>
 </div>
 <br>
 <script src="./script.js"></script>

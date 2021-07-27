@@ -8,14 +8,10 @@
     <link rel="stylesheet" type="text/css" href="./watercalc.css">
 </head>
 <body>
-  <div class= "titleFlex">
-  <span>
-    <div class="mainTitle">
-      GeniersTools.com
-    </div>
-  </span>
-  <span>
-    <div class="topnav" id="myTopnav">
+  <div class="mainTitle">
+    GeniersTools.com
+  </div>
+  <div class="scrollmenu">
       <a href="./index.html">Basic</a>
       <a href="#water"class="active">Hyrdonic Calculators</a>
       <a href="./electriccalc.html">Electrical Calculators</a>
@@ -26,29 +22,69 @@
   <h2><u>Typical Hydronic Calculations</u></h2>
 <p>
   <div id="oultine1">
+  <br>
+  <h3>Calculate Chiller Tonnage</h3>
     <br>
-      <h3>Calculate Chiller Tonnage</h3>
-    <br>
-      &nbsp;<label><b>GPM:</b></label>
+      &nbsp;<label>GPM:</label>
       <input id="myGpm1" type="number" placeholder=""
       oninput="tonsConv(this.value)"
-      onchange="tonsConv(this.value)" step=".5" min="0" max="5000" value="500"><span>&nbsp;<b>gpm</b></span>
+      onchange="tonsConv(this.value)" step=".5" min="0" max="5000" value="500"><span>&nbsp;gpm</span>
     <br>
     <br>
-      &nbsp;<label><b>Delta T:</b></label><b></b>
+      &nbsp;<label>Delta T:</label><b></b>
       <input id="myDeltaT1" type="number" placeholder=""
       oninput="tonsConv(this.value)"
       onchange="tonsConv(this.value)" step="0.1" min="0" max="20" value="8"><span>&nbsp;<b>˚</b></span>
     <br>
     <br>
-      &nbsp;<b>Calculated Tonnage:</b>&nbsp;<span id= "myTons1"></span>&nbsp;<b>Tons</b>
+      &nbsp;<b>Calculated Tonnage:</b>&nbsp;<span id= "myTons1"></span>&nbsp;Tons
     <br>
     <br>
   </div>
 </p>
-<div class ="mainFooter">
-  About
-</div>
+  <div class ="mainFooter">
+    <div class="footerContent1">
+      <div>
+        <span>© Geniers Calculators</span>
+        <span>&nbsp;</span>
+        <span>|</span>
+        <span>&nbsp;</span>
+      </div>
+      <div>
+        <span>patrickjgenier@gmail.com</span>
+        <span>&nbsp;</span>
+        <span>|</span>
+        <span>&nbsp;</span>
+      </div>
+      <div>
+        <span>
+          <div class="socialIcons">
+            <div>
+              <a href="https://www.instagram.com/iampatg/">
+                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746__340.png">
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/iampatg/">
+                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/23/02/32/instagram-2433265__340.png">
+              </a>
+            </div>
+            <div>
+              <a href="https://www.twitter.com/iampatg/">
+                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/14/23/twitter-2430933__340.png">
+              </a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/in/patrickgenier/">
+                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/27/04/57/linkedin-2446228__340.png">
+              </a>
+            </div>
+          </div>
+      </div>
+        </span>
+      </div>
+    </div>
+  </div>
 <br>
 <script src="./watercalc.js"></script>
 </body>

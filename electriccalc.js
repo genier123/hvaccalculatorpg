@@ -1,5 +1,6 @@
 //------//
 function ohmsCalc() {
+
     /*Ohms*/
     var E = document.getElementById("myVolts1").value;
   
@@ -9,8 +10,11 @@ function ohmsCalc() {
 
     /*Amps*/
     document.getElementById("myResOut").innerHTML = R.toFixed(1);
+
 }
+
 function ampsCalc() {
+    
     /*Amps*/
     var E = document.getElementById("myVolts2").value;
 
@@ -19,6 +23,7 @@ function ampsCalc() {
     I = E / R;
     
     document.getElementById("myAmpsOut").innerHTML = I.toFixed(1);
+
 }
 
 function voltsCalc() {
