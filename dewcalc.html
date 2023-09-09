@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dew Point Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p#result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dew Point Calculator</h1>
+        <label for="temperature">Dry Bulb Temperature:</label>
+        <input type="number" id="temperature" placeholder="Temperature" step="0.01">
+        <label for="unit">Select Temperature Unit:</label>
+        <select id="unit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
+        <label for="humidity">Relative Humidity (%):</label>
+        <input type="number" id="humidity" placeholder="Humidity" step="0.01">
+        <button onclick="calculateDewPoint()">Calculate Dew Point</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateDewPoint() {
+            const temperatureInput = document.getElementById("temperature");
+            const humidityInput = document.getElementById("humidity");
+            const unitSelect = document.getElementById("unit");
+            const resultElement = document.getElementById("result");
+
+            const temperature = parseFloat(temperatureInput.value);
+            const humidity = parseFloat(humidityInput.value);
+            const unit = unitSelect.value;
+
+            if (isNaN(temperature) || isNaN(humidity)) {
+                resultElement.textContent = "Please enter valid values for temperature and humidity.";
+                return;
+            }
+
+            let t;
+            if (unit === "celsius") {
+                t = temperature;
+            } else if (unit === "fahrenheit") {
+                t = (temperature - 32) * 5/9; // Convert Fahrenheit to Celsius
+            }
+
+            const dewPoint = calculateDewPointCelsius(t, humidity);
+
+            if (unit === "fahrenheit") {
+                resultElement.textContent = `Dew Point: ${celsiusToFahrenheit(dewPoint).toFixed(2)} °F`;
+            } else {
+                resultElement.textContent = `Dew Point: ${dewPoint.toFixed(2)} °C`;
+            }
+        }
+
+        // Dew Point Calculation (Celsius)
+        function calculateDewPointCelsius(temperature, humidity) {
+            const dewPoint = temperature - ((100 - humidity) / 5);
+            return dewPoint;
+        }
+
+        // Celsius to Fahrenheit Conversion
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+    </script>
+<script src="./dewcalc.js"></script>
+</body>
+</html>

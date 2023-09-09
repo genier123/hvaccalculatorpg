@@ -1,0 +1,156 @@
+/*-----------------Common Styles------------------------*/
+body {
+
+  background-image: url("https://cdn.pixabay.com/photo/2017/12/03/20/31/background-2995826_960_720.png");
+  font-family: sans-serif;
+  padding: 1% 1% 1% 1%;
+
+}
+
+h2 {
+
+  padding-left: 1%;
+  text-shadow: 1px 1px 2px gray;
+
+}
+
+h3 {
+  
+  padding-left: 1%;
+  text-shadow: 1px 1px 1px gray;
+  font-size: large;
+  text-decoration: underline;
+  
+}
+
+@media screen and (max-width: 812px) {
+
+  h2 {
+
+    text-align: center;
+
+  }
+
+}
+
+.mainTitle {
+
+  background-color: whitesmoke;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-style: italic;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  text-shadow: 1px 1px 1px lightslategrey;
+  color: black;
+  box-shadow: 1px 1px 2px lightslategrey;
+
+}
+
+.mainFooter {
+
+  background-color: whitesmoke;
+  font-size: xx-small;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: darkslategray;
+  box-shadow: 1px 1px 2px lightslategray;
+
+}
+
+/*-----------------Menu Bar------------------------*/ 
+div.scrollmenu {
+
+  background-color: whitesmoke;
+  overflow: auto;
+  white-space: nowrap;
+  border-radius: 1px;
+  border-top: solid lightgray 1px;
+  border-bottom: solid lightgray 1px;
+  box-shadow: 1px 1px 2px lightslategray;
+  
+}
+
+div.scrollmenu a {
+
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  border-bottom: black thin;
+
+}
+
+div.scrollmenu a:hover {
+
+  background-color:lightslategray;
+  color: whitesmoke;
+  border-radius: 1px;
+  border: 1px;
+  border-color: lightgray;
+
+}
+
+@media screen and (max-width: 812px) {
+
+  .scrollmenu a {
+
+    float: none;
+    display: block;
+
+  }
+  
+}
+
+/*-----------------Calculator Outline Template------------------------*/ 
+#oultine1 {
+  
+  background-color: white;
+  box-shadow: 1px 1px 2px lightslategray;
+  font-size: medium;
+  max-width: 812px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+  border-width: thin;
+  border-color: black;
+
+}
+
+ @media screen and (max-width: 812px) {
+  
+  #oultine1 {
+    
+    align-content: center;
+    display: block;
+    width: 100%;
+    text-align: center; /* If you want the text to be left-aligned on small screens */
+
+  }
+
+}
+
+/*---Footer Styles-----*/
+.footerContent1 {
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+.socialIcons {
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+.icon {
+
+  padding: 1px 1px 1px 1px;
+  width: 20px;
+  height: 20px;
+
+}
