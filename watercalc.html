@@ -8,84 +8,77 @@
     <link rel="stylesheet" type="text/css" href="./watercalc.css">
 </head>
 <body>
-  <div class="mainTitle">
-    GeniersTools.com
-  </div>
-  <div class="scrollmenu">
-      <a href="./index.html">Basic</a>
-      <a href="#water"class="active">Hyrdonic Calculators</a>
-      <a href="./electriccalc.html">Electrical Calculators</a>
-      <a href="#about">Other Calculators</a>
-    </div>
-  </span>
-  </div>
-  <h2><u>Typical Hydronic Calculations</u></h2>
-<p>
-  <div id="oultine1">
-  <br>
-  <h3>Calculate Chiller Tonnage</h3>
-    <br>
-      &nbsp;<label>GPM:</label>
-      <input id="myGpm1" type="number" placeholder=""
-      oninput="tonsConv(this.value)"
-      onchange="tonsConv(this.value)" step=".5" min="0" max="5000" value="500"><span>&nbsp;gpm</span>
-    <br>
-    <br>
-      &nbsp;<label>Delta T:</label><b></b>
-      <input id="myDeltaT1" type="number" placeholder=""
-      oninput="tonsConv(this.value)"
-      onchange="tonsConv(this.value)" step="0.1" min="0" max="20" value="8"><span>&nbsp;<b>˚</b></span>
-    <br>
-    <br>
-      &nbsp;<b>Calculated Tonnage:</b>&nbsp;<span id= "myTons1"></span>&nbsp;Tons
-    <br>
-    <br>
-  </div>
-</p>
-  <div class ="mainFooter">
-    <div class="footerContent1">
-      <div>
-        <span>© Geniers Calculators</span>
-        <span>&nbsp;</span>
-        <span>|</span>
-        <span>&nbsp;</span>
-      </div>
-      <div>
-        <span>patrickjgenier@gmail.com</span>
-        <span>&nbsp;</span>
-        <span>|</span>
-        <span>&nbsp;</span>
-      </div>
-      <div>
-        <span>
-          <div class="socialIcons">
-            <div>
-              <a href="https://www.instagram.com/iampatg/">
-                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746__340.png">
-              </a>
-            </div>
-            <div>
-              <a href="https://www.instagram.com/iampatg/">
-                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/23/02/32/instagram-2433265__340.png">
-              </a>
-            </div>
-            <div>
-              <a href="https://www.twitter.com/iampatg/">
-                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/14/23/twitter-2430933__340.png">
-              </a>
-            </div>
-            <div>
-              <a href="https://www.linkedin.com/in/patrickgenier/">
-                <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/27/04/57/linkedin-2446228__340.png">
-              </a>
-            </div>
-          </div>
-      </div>
-        </span>
-      </div>
-    </div>
-  </div>
 <br>
+  <!-- Tab menu -->
+  <div class="tab">
+    <a href="#" class="tablinks active" onclick="openTab(event, 'Basic')">Basic</a>
+    <a href="./watercalc.html" class="tablinks" onclick="openTab(event, 'Hydronic')">Hydronic Calculators</a>
+    <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Electrical')">Electrical Calculators</a>
+    <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Other')">Other Calculators</a>
+  </div>
+  
+  <!-- Content for each tab -->
+  <div id="Basic" class="tabcontent" style="display: block;">
+    <h3>Basic Content</h3>
+    <p>This is the basic tab content.</p>
+  </div>
+  
+  <div id="Hydronic" class="tabcontent">
+    <h3>Hydronic Calculators Content</h3>
+    <p>This is the content for hydronic calculators.</p>
+  </div>
+  
+  <div id="Electrical" class="tabcontent">
+    <h3>Electrical Calculators Content</h3>
+    <p>This is the content for electrical calculators.</p>
+  </div>
+  
+  <div id="Other" class="tabcontent">
+    <h3>Other Calculators Content</h3>
+    <p>This is the content for other calculators.</p>
+  </div>
+
+
+  <div class="container">
+    <div class="calculator" id="flowRateCalculator">
+        <h2>Water Flow Rate Calculator (GPM)</h2>
+        <div class="input-group">
+            <label for="diameter">Pipe Diameter:</label>
+            <input type="number" id="diameter" placeholder="Enter diameter">
+            <select id="diameter-unit">
+                <option value="inches">Inches</option>
+                <option value="cm">Centimeters</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="velocity">Water Velocity:</label>
+            <input type="number" id="velocity" placeholder="Enter velocity">
+            <select id="velocity-unit">
+                <option value="ft/s">ft/s</option>
+                <option value="m/s">m/s</option>
+            </select>
+        </div>
+        <button class="btn-calculate" onclick="calculateFlowRate()">Calculate</button>
+        <button class="btn-reset" onclick="resetFlowRate()">Reset</button>
+        <div class="resultFlow" id="resultFlow"></div>
+    </div>
+    <hr> <!-- Add a horizontal line to separate the calculators -->
+    <div class="calculator" id="tonnageCalculator">
+      <h2>Tonnage Calculator</h2>
+      <div class="input-group">
+          <label for="deltaT">Temperature Difference (ΔT) (°F):</label>
+          <input type="number" id="deltaT" placeholder="Enter ΔT">
+      </div>
+      <div class="input-group">
+          <label for="flowRate">Water Flow Rate (GPM):</label>
+          <input type="number" id="flowRate" placeholder="Enter GPM">
+      </div>
+      <button class="btn-calculate" onclick="calculateTonnage()">Calculate</button>
+      <button class="btn-reset" onclick="resetTonnage()">Reset</button>
+      <div class="resultTon" id="resultTon"></div>
+  </div>
+</div>
+</body>
 <script src="./watercalc.js"></script>
 </body>
 </html>

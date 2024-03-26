@@ -1,123 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dew Point Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #333;
-        }
-        .container {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 400px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-        }
-        input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        p#result {
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dew Point Calculator</title>
+<link rel="stylesheet" type="text/css" href="./dewcalc.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Dew Point Calculator</h1>
-        <label for="temperature">Dry Bulb Temperature:</label>
-        <input type="number" id="temperature" placeholder="Temperature" step="0.01">
-        <label for="unit">Select Temperature Unit:</label>
-        <select id="unit">
-            <option value="celsius">Celsius</option>
-            <option value="fahrenheit">Fahrenheit</option>
-        </select>
-        <label for="humidity">Relative Humidity (%):</label>
-        <input type="number" id="humidity" placeholder="Humidity" step="0.01">
-        <button onclick="calculateDewPoint()">Calculate Dew Point</button>
-        <p id="result"></p>
+    <div class="mainTitle">
+        Heat Cool Wizard
     </div>
+  <br>
+  <!-- Tab menu -->
+  <div class="tab">
+    <a href="#" class="tablinks active" onclick="openTab(event, 'Basic')">Basic</a>
+    <a href="./watercalc.html" class="tablinks" onclick="openTab(event, 'Hydronic')">Hydronic Calculators</a>
+    <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Electrical')">Electrical Calculators</a>
+    <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Other')">Other Calculators</a>
+  </div>
+  
+  <!-- Content for each tab -->
+  <div id="Basic" class="tabcontent" style="display: block;">
+    <h3>Basic Content</h3>
+    <p>This is the basic tab content.</p>
+  </div>
+  
+  <div id="Hydronic" class="tabcontent">
+    <h3>Hydronic Calculators Content</h3>
+    <p>This is the content for hydronic calculators.</p>
+  </div>
+  
+  <div id="Electrical" class="tabcontent">
+    <h3>Electrical Calculators Content</h3>
+    <p>This is the content for electrical calculators.</p>
+  </div>
+  
+  <div id="Other" class="tabcontent">
+    <h3>Other Calculators Content</h3>
+    <p>This is the content for other calculators.</p>
+  </div>
+  
+<div class="calculator">
+    <h2>Dew Point Calculator</h2>
+    <label for="temperature">Ambient Temperature:</label><br>
+    <input type="number" id="temperature" step="0.1" value="70"> 
+    <select id="temp-unit" onchange="changeTemperatureInput()">
+        <option value="F" selected>°F</option>
+        <option value="C">°C</option>
+    </select><br>
+    <label for="pressure">Atmospheric Pressure:</label><br>
+    <input type="number" id="pressure" step="0.01" value="14.7"> 
+    <select id="pressure-unit" onchange="changePressureInput()">
+        <option value="psi" selected>psi</option>
+        <option value="mb">mb</option>
+    </select><br>
+    <label for="humidity">Relative Humidity:</label><br>
+    <input type="number" id="humidity" min="0" max="100" step="0.1" value="40"><br>
+    <button onclick="calculateDewPoint()">Calculate Dew Point</button>
+    <button onclick="resetCalculator()">Reset</button><br>
+    <p id="result"></p>
+</div>
 
-    <script>
-        function calculateDewPoint() {
-            const temperatureInput = document.getElementById("temperature");
-            const humidityInput = document.getElementById("humidity");
-            const unitSelect = document.getElementById("unit");
-            const resultElement = document.getElementById("result");
+<script>
+function changeTemperatureInput() {
+    var tempUnit = document.getElementById('temp-unit').value;
+    var temperatureInput = document.getElementById('temperature');
+    
+    if (tempUnit === 'F') {
+        temperatureInput.value = "70";
+    } else if (tempUnit === 'C') {
+        temperatureInput.value = "21.1";
+    }
+}
 
-            const temperature = parseFloat(temperatureInput.value);
-            const humidity = parseFloat(humidityInput.value);
-            const unit = unitSelect.value;
+function changePressureInput() {
+    var pressureUnit = document.getElementById('pressure-unit').value;
+    var pressureInput = document.getElementById('pressure');
+    
+    if (pressureUnit === 'psi') {
+        pressureInput.value = "14.7";
+    } else if (pressureUnit === 'mb') {
+        pressureInput.value = "1013.25";
+    }
+}
 
-            if (isNaN(temperature) || isNaN(humidity)) {
-                resultElement.textContent = "Please enter valid values for temperature and humidity.";
-                return;
-            }
+function calculateDewPoint() {
+    var temperature = parseFloat(document.getElementById('temperature').value);
+    var pressure = parseFloat(document.getElementById('pressure').value);
+    var humidity = parseFloat(document.getElementById('humidity').value);
+    
+    if (isNaN(temperature) || isNaN(pressure) || isNaN(humidity) || humidity < 0 || humidity > 100) {
+        alert("Please enter valid values for temperature, pressure, and relative humidity (between 0 and 100).");
+        return;
+    }
 
-            let t;
-            if (unit === "celsius") {
-                t = temperature;
-            } else if (unit === "fahrenheit") {
-                t = (temperature - 32) * 5/9; // Convert Fahrenheit to Celsius
-            }
+    var tempUnit = document.getElementById('temp-unit').value;
+    if (tempUnit === 'F') {
+        // Convert Fahrenheit to Celsius
+        temperature = (temperature - 32) * (5/9);
+    }
 
-            const dewPoint = calculateDewPointCelsius(t, humidity);
+    var pressureUnit = document.getElementById('pressure-unit').value;
+    if (pressureUnit === 'psi') {
+        // Convert PSI to millibars
+        pressure *= 68.9476;
+    }
 
-            if (unit === "fahrenheit") {
-                resultElement.textContent = `Dew Point: ${celsiusToFahrenheit(dewPoint).toFixed(2)} °F`;
-            } else {
-                resultElement.textContent = `Dew Point: ${dewPoint.toFixed(2)} °C`;
-            }
-        }
+    // Constants for the dew point calculation
+    var a = 17.27;
+    var b = 237.7;
 
-        // Dew Point Calculation (Celsius)
-        function calculateDewPointCelsius(temperature, humidity) {
-            const dewPoint = temperature - ((100 - humidity) / 5);
-            return dewPoint;
-        }
+    // Saturation vapor pressure (in hPa) at given temperature
+    var saturationVaporPressure = 6.112 * Math.exp((17.67 * temperature) / (temperature + 243.5));
 
-        // Celsius to Fahrenheit Conversion
-        function celsiusToFahrenheit(celsius) {
-            return (celsius * 9/5) + 32;
-        }
-    </script>
-<script src="./dewcalc.js"></script>
-</body>
-</html>
+    // Actual vapor pressure (in hPa) from relative humidity
+    var actualVaporPressure = saturationVaporPressure * (humidity / 100);
+
+    // Dew point calculation
+    var dewPoint = (b * (Math.log(actualVaporPressure / 6.112))) / (a - (Math.log(actualVaporPressure / 6.112)));
+
+    // Convert dew point to Fahrenheit if necessary
+    if (tempUnit === 'F') {
+        dewPoint = dewPoint * (9/5) + 32;
+    }
+    
+    document.getElementById('result').innerHTML = "Dew Point: " + dewPoint.toFixed(1) + " " + tempUnit;
+}
+
+function resetCalculator() {
+    document.getElementById('temperature').value = "70";
+    document.getElementById('temp-unit').value = "F";
+    document.getElementById('pressure').value = "14.7";
+    document.getElementById('pressure-unit').value = "psi";
+    document.getElementById('humidity').value = "40";
+    document.getElementById('result').innerHTML = "";
+}
+</script>
+
+</body

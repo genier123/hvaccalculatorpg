@@ -4,103 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Heat Cool Wizard</title>
     <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+</head>
 <body>
   <div class="mainTitle">
-    GeniersTools.com
-  </div>
-  <div class="scrollmenu">
-    <a href="#home" class="active">Basic</a>
-    <a href="./watercalc.html">Hyrdonic Calculators</a>
-    <a href="./electriccalc.html">Electrical Calculators</a>
-    <a href="#about">Other Calculators</a>
-  </div>
-<h2><u>Typical Air Calculations</u></h2>
-<p>
-  <div id="oultine1">
-    <br>
-      <h3>Convert Temperatures</h3>
-    <br>
-        &nbsp;<label>Fahrenheit:</label>
-        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
-        oninput="TempConverter(this.value)"
-        onchange="TempConverter(this.value)" step=".1" min="-50" max="250" value="65"><span>&nbsp;<b>˚</b></span>
-      <br>
-      <br>
-          &nbsp;<b>Celsius:</b>&nbsp;<span id= "outputCelsius"></span>&nbsp;<b>˚</b>
-      <br>
-      <br>
-        &nbsp;<b>Kelvin:</b>&nbsp;<span id= "outputKelvin"></span>&nbsp;<b>˚</b>
-      <br>
-      <br>
+      Heat Cool Wizard
   </div>
 <br>
-    <div id="oultine1">
-      <br>
-        <h3>Convert FPM to CFM</h3>
-      <br>
-        &nbsp;<label>Velocity Pressure:</label>
-        <input id="velocity2" type="number" placeholder=""
-        oninput="CfmConverter(this.value)"
-        onchange="CfmConverter(this.value)" step=".1" min="0" max="2000" value="500"><span>&nbsp;ft/m</span>
-      <br>
-      <br>
-        &nbsp;<label>Area:</label>
-        <input id="area2" type="number" placeholder=""
-        oninput="CfmConverter(this.value)"
-        onchange="CfmConverter(this.value)" step="0.01" min="0" max="5" value=".8"><span>&nbsp;ft2</span>
-      <br>
-      <br>
-          &nbsp;<b>Calculated CFM:</b>&nbsp;<span id= "cfm1"></span>&nbsp;cfm
-      <br>
-      <br>
-    </div>
-</p>
-<div class ="mainFooter">
-  <div class="footerContent1">
-    <div>
-      <span>© Geniers Calculators</span>
-      <span>&nbsp;</span>
-      <span>|</span>
-      <span>&nbsp;</span>
-    </div>
-    <div>
-      <span>patrickjgenier@gmail.com</span>
-      <span>&nbsp;</span>
-      <span>|</span>
-      <span>&nbsp;</span>
-    </div>
-    <div>
-      <span>
-        <div class="socialIcons">
-          <div>
-            <a href="https://www.instagram.com/iampatg/">
-              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746__340.png">
-            </a>
-          </div>
-          <div>
-            <a href="https://www.instagram.com/iampatg/">
-              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/23/02/32/instagram-2433265__340.png">
-            </a>
-          </div>
-          <div>
-            <a href="https://www.twitter.com/iampatg/">
-              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/14/23/twitter-2430933__340.png">
-            </a>
-          </div>
-          <div>
-            <a href="https://www.linkedin.com/in/patrickgenier/">
-              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/27/04/57/linkedin-2446228__340.png">
-            </a>
-          </div>
-        </div>
-    </div>
-      </span>
-    </div>
-  </div>
+<!-- Tab menu -->
+<div class="tab">
+  <a href="#" class="tablinks active" onclick="openTab(event, 'Basic')">Basic</a>
+  <a href="./watercalc.html" class="tablinks" onclick="openTab(event, 'Hydronic')">Hydronic Calculators</a>
+  <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Electrical')">Electrical Calculators</a>
+  <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Other')">Other Calculators</a>
 </div>
-<br>
-<script src="./script.js"></script>
-</body>
+
+<!-- Content for each tab -->
+<div id="Basic" class="tabcontent" style="display: block;">
+  <h3>Basic Content</h3>
+  <p>This is the basic tab content.</p>
+</div>
+
+<div id="Hydronic" class="tabcontent">
+  <h3>Hydronic Calculators Content</h3>
+  <p>This is the content for hydronic calculators.</p>
+</div>
+
+<div id="Electrical" class="tabcontent">
+  <h3>Electrical Calculators Content</h3>
+  <p>This is the content for electrical calculators.</p>
+</div>
+
+<div id="Other" class="tabcontent">
+  <h3>Other Calculators Content</h3>
+  <p>This is the content for other calculators.</p>
+</div>
+
+      <h2><u>Typical Air Calculations</u></h2>
+      <div class="outline">
+          <br>
+          <h3>Convert Temperatures</h3>
+          <br>
+          &nbsp;<label>Fahrenheit:</label>
+          <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="TempConverter(this.value)" onchange="TempConverter(this.value)" step=".1" min="-50" max="250" value="65"><span>&nbsp;<b>˚</b></span>
+          <br><br>
+          &nbsp;<b>Celsius:</b>&nbsp;<span id="outputCelsius"></span>&nbsp;<b>˚</b>
+          <br><br>
+          &nbsp;<b>Kelvin:</b>&nbsp;<span id="outputKelvin"></span>&nbsp;<b>˚</b>
+          <br><br>
+      </div>
+      <br>
+      <div class="outline">
+          <br>
+          <h3>Convert FPM to CFM</h3>
+          <br>
+          &nbsp;<label>Velocity Pressure:</label>
+          <input id="velocity2" type="number" placeholder="" oninput="CfmConverter(this.value)" onchange="CfmConverter(this.value)" step=".1" min="0" max="2000" value="500"><span>&nbsp;ft/m</span>
+          <br><br>
+          &nbsp;<label>Area:</label>
+          <input id="area2" type="number" placeholder="" oninput="CfmConverter(this.value)" onchange="CfmConverter(this.value)" step="0.01" min="0" max="5" value=".8"><span>&nbsp;ft2</span>
+          <br><br>
+          &nbsp;<b>Calculated CFM:</b>&nbsp;<span id="cfm1"></span>&nbsp;cfm
+          <br><br>
+      </div>
+      <div class="mainFooter">
+          <div class="footerContent1">
+              <div>
+                  <span>© Geniers Calculators</span>
+                  <span>&nbsp;|&nbsp;</span>
+              </div>
+              <div>
+                  <span>patrickjgenier@gmail.com</span>
+                  <span>&nbsp;|&nbsp;</span>
+              </div>
+              <div>
+                  <div class="socialIcons">
+                      <div>
+                          <a href="https://www.instagram.com/iampatg/">
+                              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746__340.png" alt="Facebook">
+                          </a>
+                      </div>
+                      <div>
+                          <a href="https://www.instagram.com/iampatg/">
+                              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/23/02/32/instagram-2433265__340.png" alt="Instagram">
+                          </a>
+                      </div>
+                      <div>
+                          <a href="https://www.twitter.com/iampatg/">
+                              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/22/14/23/twitter-2430933__340.png" alt="Twitter">
+                          </a>
+                      </div>
+                      <div>
+                          <a href="https://www.linkedin.com/in/patrickgenier/">
+                              <img class="icon" src="https://cdn.pixabay.com/photo/2017/06/27/04/57/linkedin-2446228__340.png" alt="LinkedIn">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <script src="./script.js"></script>
+  </body>
 </html>

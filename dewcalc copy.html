@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    </head>
+    <body>
+    
+    <div class="calculator">
+        <h2>Dew Point Calculator</h2>
+        <label for="temperature">Ambient Temperature:</label><br>
+        <input type="number" id="temperature" step="0.1" value="70"> 
+        <select id="temp-unit" onchange="changeTemperatureInput()">
+            <option value="F" selected>°F</option>
+            <option value="C">°C</option>
+        </select><br>
+        <label for="pressure">Atmospheric Pressure:</label><br>
+        <input type="number" id="pressure" step="0.01" value="14.7"> 
+        <select id="pressure-unit" onchange="changePressureInput()">
+            <option value="psi" selected>psi</option>
+            <option value="mb">mb</option>
+        </select><br>
+        <label for="humidity">Relative Humidity:</label><br>
+        <input type="number" id="humidity" min="0" max="100" step="0.1" value="40"><br>
+        <button onclick="calculateDewPoint()">Calculate Dew Point</button>
+        <button onclick="resetCalculator()">Reset</button><br>
+        <p id="result"></p>
+    </div>
+    
+    <script>
+    function changeTemperatureInput() {
+        var tempUnit = document.getElementById('temp-unit').value;
+        var temperatureInput = document.getElementById('temperature');
+        
+        if (tempUnit === 'F') {
+            temperatureInput.value = "70";
+        } else if (tempUnit === 'C') {
+            temperatureInput.value = "21.1";
+        }
+    }
+    
+    function changePressureInput() {
+        var pressureUnit = document.getElementById('pressure-unit').value;
+        var pressureInput = document.getElementById('pressure');
+        
+        if (pressureUnit === 'psi') {
+            pressureInput.value = "14.7";
+        } else if (pressureUnit === 'mb') {
+            pressureInput.value = "1013.25";
+        }
+    }
+    
+    function calculateDewPoint() {
+        var temperature = parseFloat(document.getElementById('temperature').value);
+        var pressure = parseFloat(document.getElementById('pressure').value);
+        var humidity = parseFloat(document.getElementById('humidity').value);
+        
+        if (isNaN(temperature) || isNaN(pressure) || isNaN(humidity) || humidity < 0 || humidity > 100) {
+            alert("Please enter valid values for temperature, pressure, and relative humidity (between 0 and 100).");
+            return;
+        }
+    
+        var tempUnit = document.getElementById('temp-unit').value;
+        if (tempUnit === 'F') {
+            // Convert Fahrenheit to Celsius
+            temperature = (temperature - 32) * (5/9);
+        }
+    
+        var pressureUnit = document.getElementById('pressure-unit').value;
+        if (pressureUnit === 'psi') {
+            // Convert PSI to millibars
+            pressure *= 68.9476;
+        }
+    
+        // Constants for the dew point calculation
+        var a = 17.27;
+        var b = 237.7;
+    
+        // Saturation vapor pressure (in hPa) at given temperature
+        var saturationVaporPressure = 6.112 * Math.exp((17.67 * temperature) / (temperature + 243.5));
+    
+        // Actual vapor pressure (in hPa) from relative humidity
+        var actualVaporPressure = saturationVaporPressure * (humidity / 100);
+    
+        // Dew point calculation
+        var dewPoint = (b * (Math.log(actualVaporPressure / 6.112))) / (a - (Math.log(actualVaporPressure / 6.112)));
+    
+        // Convert dew point to Fahrenheit if necessary
+        if (tempUnit === 'F') {
+            dewPoint = dewPoint * (9/5) + 32;
+        }
+        
+        document.getElementById('result').innerHTML = "Dew Point: " + dewPoint.toFixed(1) + " " + tempUnit;
+    }
+    
+    function resetCalculator() {
+        document.getElementById('temperature').value = "70";
+        document.getElementById('temp-unit').value = "F";
+        document.getElementById('pressure').value = "14.7";
+        document.getElementById('pressure-unit').value = "psi";
+        document.getElementById('humidity').value = "40";
+        document.getElementById('result').innerHTML = "";
+    }
+    </script>
+    
+    </body

@@ -154,3 +154,32 @@ div.scrollmenu a:hover {
   height: 20px;
 
 }
+
+
+  /* Style for the tab menu */
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+
+  /* Style for the tab links */
+  .tab a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  /* Change background color of links on hover */
+  .tab a:hover {
+    background-color: #ddd;
+  }
+
+  /* Set active tab */
+  .active {
+    background-color: #ccc;
+  }

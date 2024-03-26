@@ -1,37 +1,43 @@
-/*-----------------Common Styles------------------------*/
 body {
-
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
   background-image: url("https://cdn.pixabay.com/photo/2017/12/03/20/31/background-2995826_960_720.png");
-  font-family: sans-serif;
-  padding: 1% 1% 1% 1%;
-
+}
+.calculator {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+input[type="number"] {
+  width: 100px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
 }
 
-h2 {
-
-  padding-left: 1%;
-  text-shadow: 1px 1px 2px gray;
-
-}
-
-h3 {
-  
-  padding-left: 1%;
-  text-shadow: 1px 1px 1px gray;
-  font-size: large;
-  text-decoration: underline;
-  
-}
-
-@media screen and (max-width: 812px) {
-
-  h2 {
-
-    text-align: center;
-
-  }
-
-}
+/*MainTitles and Footers */
 
 .mainTitle {
 
@@ -60,97 +66,28 @@ h3 {
 
 }
 
-/*-----------------Menu Bar------------------------*/ 
-div.scrollmenu {
+h2 {
 
-  background-color: whitesmoke;
-  overflow: auto;
-  white-space: nowrap;
-  border-radius: 1px;
-  border-top: solid lightgray 1px;
-  border-bottom: solid lightgray 1px;
-  box-shadow: 1px 1px 2px lightslategray;
+  padding-left: 1%;
+  text-shadow: 1px 1px 2px gray;
+
+}
+
+h3 {
   
-}
-
-div.scrollmenu a {
-
-  display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px;
-  border-bottom: black thin;
-
-}
-
-div.scrollmenu a:hover {
-
-  background-color:lightslategray;
-  color: whitesmoke;
-  border-radius: 1px;
-  border: 1px;
-  border-color: lightgray;
+  padding-left: 1%;
+  text-shadow: 1px 1px 1px gray;
+  font-size: large;
+  text-decoration: underline;
 
 }
 
 @media screen and (max-width: 812px) {
 
-  .scrollmenu a {
+  h2 {
 
-    float: none;
-    display: block;
-
-  }
-  
-}
-
-/*-----------------Calculator Outline Template------------------------*/ 
-#oultine1 {
-  
-  background-color: white;
-  box-shadow: 1px 1px 2px lightslategray;
-  font-size: medium;
-  max-width: 812px;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 5px;
-  border-width: thin;
-  border-color: black;
-
-}
-
- @media screen and (max-width: 812px) {
-  
-  #oultine1 {
-    
-    align-content: center;
-    display: block;
-    width: 100%;
-    text-align: center; /* If you want the text to be left-aligned on small screens */
+    text-align: center;
 
   }
-
-}
-
-/*---Footer Styles-----*/
-.footerContent1 {
-
-  display: flex;
-  flex-direction: row;
-
-}
-
-.socialIcons {
-
-  display: flex;
-  flex-direction: row;
-
-}
-
-.icon {
-
-  padding: 1px 1px 1px 1px;
-  width: 20px;
-  height: 20px;
 
 }
