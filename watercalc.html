@@ -8,37 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./watercalc.css">
 </head>
 <body>
-<br>
-  <!-- Tab menu -->
-  <div class="tab">
-    <a href="#" class="tablinks active" onclick="openTab(event, 'Basic')">Basic</a>
-    <a href="./watercalc.html" class="tablinks" onclick="openTab(event, 'Hydronic')">Hydronic Calculators</a>
-    <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Electrical')">Electrical Calculators</a>
-    <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Other')">Other Calculators</a>
-  </div>
-  
-  <!-- Content for each tab -->
-  <div id="Basic" class="tabcontent" style="display: block;">
-    <h3>Basic Content</h3>
-    <p>This is the basic tab content.</p>
-  </div>
-  
-  <div id="Hydronic" class="tabcontent">
-    <h3>Hydronic Calculators Content</h3>
-    <p>This is the content for hydronic calculators.</p>
-  </div>
-  
-  <div id="Electrical" class="tabcontent">
-    <h3>Electrical Calculators Content</h3>
-    <p>This is the content for electrical calculators.</p>
-  </div>
-  
-  <div id="Other" class="tabcontent">
-    <h3>Other Calculators Content</h3>
-    <p>This is the content for other calculators.</p>
-  </div>
-
-
+  <!-- Calculator Content -->
   <div class="container">
     <div class="calculator" id="flowRateCalculator">
         <h2>Water Flow Rate Calculator (GPM)</h2>
@@ -62,7 +32,7 @@
         <button class="btn-reset" onclick="resetFlowRate()">Reset</button>
         <div class="resultFlow" id="resultFlow"></div>
     </div>
-    <hr> <!-- Add a horizontal line to separate the calculators -->
+    <br><!-- Add a horizontal line to separate the calculators -->
     <div class="calculator" id="tonnageCalculator">
       <h2>Tonnage Calculator</h2>
       <div class="input-group">

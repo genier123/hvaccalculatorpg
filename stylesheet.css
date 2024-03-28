@@ -1,7 +1,5 @@
 /*-----------------Common Styles------------------------*/
 body {
-
-  background-image: url("https://cdn.pixabay.com/photo/2017/12/03/20/31/background-2995826_960_720.png");
   font-family: sans-serif;
   padding: 1% 1% 1% 1%;
 
@@ -154,7 +152,6 @@ div.scrollmenu a:hover {
   height: 20px;
 
 }
-
 
   /* Style for the tab menu */
   .tab {

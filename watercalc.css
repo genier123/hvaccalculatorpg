@@ -1,85 +1,76 @@
-body {
+ /* Body */
+ body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  min-height: 100vh; /* Ensure body takes up at least the height of the viewport */
-  background-color: #f4f4f4;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally within container */
-  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .calculator {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   padding: 20px;
-  width: 300px;
-  margin-bottom: 20px; /* Add some space between calculators */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.calculator h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
 }
 
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .input-group label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.input-group input {
-  width: 70%;
+.input-group input,
+.input-group select {
+  width: calc(50% - 5px);
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
 }
 
 .input-group select {
-  width: 30%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 50%;
 }
 
-.btn-calculate {
+.btn-calculate,
+.btn-reset {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
 }
 
-.btn-calculate:hover {
+.btn-calculate:hover,
+.btn-reset:hover {
   background-color: #0056b3;
 }
 
-.resultFlow {
-  margin-top: 20px;
-  font-weight: bold;
-}
-
+.resultFlow,
 .resultTon {
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold;
-}
-
-
-.mainTitle {
-
-  background-color: whitesmoke;
-  font-size: xx-large;
-  font-weight: bolder;
-  font-style: italic;
-  padding-top: 8px;
-  padding-bottom: 5px;
-  color: black;
-
+  font-size: 0.9rem;
 }
