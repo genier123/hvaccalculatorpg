@@ -5,75 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./watercalc.css">
+    <link rel="stylesheet" type="text/css" href="./electriccalc.css">
 </head>
 <body>
-  <div class="mainTitle">
-    GeniersTools.com
-  </div>
-  <div class="scrollmenu">
-      <a href="./index.html">Basic</a>
-      <a href="./watercalc.html">Hyrdonic Calculators</a>
-      <a href="#electrical"class="active">Electrical Calculators</a>
-      <a href="#other">Other Calculators</a>
-    </div>
-  </span>
-  </div>
-  <h2><u>Typical Electrical Calculations</u></h2>
-<p>
-  <div id="oultine1">
-    <br>
-    <h3>Ohms Law</h3>
-    <br>
-        &nbsp;<b>Resistance:</b>&nbsp;<span id= "myResOut"></span>&nbsp;Ω
-    <br>
-    <br>
-        &nbsp;<label><b>Volts:</b></label>
-        <input id="myVolts1" type="number" placeholder=""
-        oninput="ohmsCalc(this.value)"
-        onchange="ohmsCalc(this.value)" step="0.1" min="0" max="10000" value="500"><span>&nbsp;<b>V</b></span>
-    <br>
-    <br>
-        &nbsp;<label><b>Amps:</b></label><b></b>
-        <input id="myAmps1" type="number" placeholder=""
-        oninput="ohmsCalc(this.value)"
-        onchange="ohmsCalc(this.value)" step="0.01" min="0" max="1000" value="1"><span>&nbsp;<b>A</b></span>
-    <br>
-    <br>
-    <br>
-        &nbsp;<b>Amperage:</b>&nbsp;<span id= "myAmpsOut"></span>&nbsp;A
-    <br>
-    <br>
-        &nbsp;<label><b>Volts:</b></label>
-        <input id="myVolts2" type="number" placeholder=""
-        oninput="ampsCalc(this.value)"
-        onchange="ampsCalc(this.value)" step="0.1" min="0" max="10000" value="500"><span>&nbsp;<b>V</b></span>
-    <br>   
-    <br>
-        &nbsp;<label><b>Ohms:</b></label><b></b>
-        <input id="myRes2" type="number" placeholder=""
-        oninput="ampsCalc(this.value)"
-        onchange="ampsCalc(this.value)" step="0.1" min="0" max="1000" value="500"><span>&nbsp;<b>Ω</b></span>
-    <br>
-    <br>
-    <br>
-        &nbsp;<b>Voltage:</b>&nbsp;<span id= "myVoltsOut"></span>&nbsp;V
-    <br>
-    <br>
-        &nbsp;<label><b>Amps:</b></label>
-        <input id="myAmps3" type="number" placeholder=""
-        oninput="voltsCalc(this.value)"
-        onchange="voltsCalc(this.value)" step="0.1" min="0" max="10000" value="1"><span>&nbsp;<b>A</b></span>
-    <br>   
-    <br>
-        &nbsp;<label><b>Ohms:</b></label><b></b>
-        <input id="myRes3" type="number" placeholder=""
-        oninput="voltsCalc(this.value)"
-        onchange="voltsCalc(this.value)" step="0.1" min="0" max="1000" value="500"><span>&nbsp;<b>Ω</b></span>
-    <br>
-    <br>
+<!-- Tab menu -->
+<ul class="tabmenu">
+  <li><a href="./index.html" class="tablinks active" onclick="openTab(event, 'Electrical')">Home</a></li>
+  <li><a href="./watercalc.html" class="tablinks" onclick="openTab(event, 'Waterflow')">Waterflow</a></li>
+  <li><a href="./aircalc.html" class="tablinks" onclick="openTab(event, 'Airflow')">Airflow</a></li>
+  <li><a href="./dewcalc.html" class="tablinks" onclick="openTab(event, 'Mechanical')">Mechanical</a></li>
+</ul>
+
+<!-- Content for each tab -->
+<div id="Electrical" class="tabcontent" style="display: block;">
+  <h3>Electrical Content</h3>
+  <!-- Content will be loaded here dynamically -->
+</div>
+
+<div id="Waterflow" class="tabcontent">
+  <h3>Waterflow Content</h3>
+  <!-- Content will be loaded here dynamically -->
+</div>
+
+<div id="Airflow" class="tabcontent">
+  <h3>Airflow Content</h3>
+  <!-- Content will be loaded here dynamically -->
+</div>
+
+<div id="Mechanical" class="tabcontent">
+  <h3>Mechanical Content</h3>
+  <!-- Content will be loaded here dynamically -->
+</div>
+<br>
+ <!-- Calc Content -->
+  <div class="container">
+    <h3>Ohm's Law Calculator</h3>
+    <label for="myVolts1">Volts:</label>
+    <input id="myVolts1" type="number" placeholder="" oninput="ohmsCalc(this.value)" onchange="ohmsCalc(this.value)" step="0.1" min="0" max="10000" value="500"><span><b>V</b></span>
+    <br><br>
+    <label for="myAmps1">Amps:</label>
+    <input id="myAmps1" type="number" placeholder="" oninput="ohmsCalc(this.value)" onchange="ohmsCalc(this.value)" step="0.01" min="0" max="1000" value="1"><span><b>A</b></span>
+    <br><br>
+    <b>Resistance:</b><span id="myResOut"></span><span>Ω</span>
+    <br><br>
+    <b>Amperage:</b><span id="myAmpsOut"></span><span>A</span>
+    <br><br>
+    <label for="myVolts2">Volts:</label>
+    <input id="myVolts2" type="number" placeholder="" oninput="ampsCalc(this.value)" onchange="ampsCalc(this.value)" step="0.1" min="0" max="10000" value="500"><span><b>V</b></span>
+    <br><br>
+    <label for="myRes2">Ohms:</label>
+    <input id="myRes2" type="number" placeholder="" oninput="ampsCalc(this.value)" onchange="ampsCalc(this.value)" step="0.1" min="0" max="1000" value="500"><span><b>Ω</b></span>
+    <br><br>
+    <b>Voltage:</b><span id="myVoltsOut"></span><span>V</span>
+    <br><br>
+    <label for="myAmps3">Amps:</label>
+    <input id="myAmps3" type="number" placeholder="" oninput="voltsCalc(this.value)" onchange="voltsCalc(this.value)" step="0.1" min="0" max="10000" value="1"><span><b>A</b></span>
+    <br><br>
+    <label for="myRes3">Ohms:</label>
+    <input id="myRes3" type="number" placeholder="" oninput="voltsCalc(this.value)" onchange="voltsCalc(this.value)" step="0.1" min="0" max="1000" value="500"><span><b>Ω</b></span>
   </div>
 </p>
+  <!-- 
   <div class ="mainFooter">
     <div class="footerContent1">
       <div>
@@ -116,7 +108,7 @@
         </span>
       </div>
     </div>
-  </div>
+  </div> -->
 <br>
 <script src="./electriccalc.js"></script>
 </body>

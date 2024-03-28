@@ -1,5 +1,55 @@
-//----------------------------------------------------//
+// Function to open tabs----
+//    function openTab(evt, tabName) {
+//    var i, tabcontent, tablinks;
+//      tabcontent = document.getElementsByClassName("tabcontent");
+//      for (i = 0; i < tabcontent.length; i++) {
+//        tabcontent[i].style.display = "none";
+//      }
+//      tablinks = document.getElementsByClassName("tablinks");
+//      for (i = 0; i < tablinks.length; i++) {
+//        tablinks[i].className = tablinks[i].className.replace(" active", "");
+//      }
+//      document.getElementById(tabName).style.display = "block";
+//      evt.currentTarget.className += " active";
+//    } 
 
+// Function to open tabs
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+  
+  // Fetch content from external HTML file and display it
+  fetchContent(tabName);
+}
+
+// Function to fetch content from external HTML file
+function fetchContent(tabName) {
+  fetch(tabName.toLowerCase() + ".html")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById(tabName).innerHTML = data;
+    })
+    .catch(error => {
+      console.error("There was a problem with your fetch operation:", error);
+    });
+}
+
+// Initially load content for the active tab
+fetchContent(document.querySelector('.tablinks.active').textContent.trim());
 //function temperatureConverter(valNum) {
 //  valNum = parseFloat(valNum);
 //  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;

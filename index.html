@@ -13,34 +13,41 @@
   </div>
 <br>
 <!-- Tab menu -->
-<div class="tab">
-  <a href="#" class="tablinks active" onclick="openTab(event, 'Basic')">Basic</a>
-  <a href="./watercalc.html" class="tablinks" onclick="openTab(event, 'Hydronic')">Hydronic Calculators</a>
-  <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Electrical')">Electrical Calculators</a>
-  <a href="./electriccalc.html" class="tablinks" onclick="openTab(event, 'Other')">Other Calculators</a>
-</div>
+<ul class="tabmenu">
+    <li><a href="./index.html" class="tablinks active" onclick="openTab(event, 'Home')">Home</a></li>
+    <li><a href="./electriccalc.html" class="tablinks active" onclick="openTab(event, 'Electrical')">Electrical</a></li>
+    <li><a href="./watercalc.html" class="tablinks" onclick="openTab(event, 'Waterflow')">Waterflow</a></li>
+    <li><a href="./aircalc.html" class="tablinks" onclick="openTab(event, 'Airflow')">Airflow</a></li>
+    <li><a href="./dewcalc.html" class="tablinks" onclick="openTab(event, 'Mechanical')">Mechanical</a></li>
+  </ul>
 
-<!-- Content for each tab -->
-<div id="Basic" class="tabcontent" style="display: block;">
-  <h3>Basic Content</h3>
-  <p>This is the basic tab content.</p>
-</div>
+    <!-- Content for each tab -->
+    <div id="Home" class="tabcontent" style="display: block;">
+        <h3>Home Content</h3>
+        <!-- Content will be loaded here dynamically -->
+      </div>
 
-<div id="Hydronic" class="tabcontent">
-  <h3>Hydronic Calculators Content</h3>
-  <p>This is the content for hydronic calculators.</p>
-</div>
-
-<div id="Electrical" class="tabcontent">
-  <h3>Electrical Calculators Content</h3>
-  <p>This is the content for electrical calculators.</p>
-</div>
-
-<div id="Other" class="tabcontent">
-  <h3>Other Calculators Content</h3>
-  <p>This is the content for other calculators.</p>
-</div>
-
+  <!-- Content for each tab -->
+  <div id="Electrical" class="tabcontent" style="display: block;">
+    <h3>Electrical Content</h3>
+    <!-- Content will be loaded here dynamically -->
+  </div>
+  
+  <div id="Waterflow" class="tabcontent">
+    <h3>Waterflow Content</h3>
+    <!-- Content will be loaded here dynamically -->
+  </div>
+  
+  <div id="Airflow" class="tabcontent">
+    <h3>Airflow Content</h3>
+    <!-- Content will be loaded here dynamically -->
+  </div>
+  
+  <div id="Mechanical" class="tabcontent">
+    <h3>Mechanical Content</h3>
+    <!-- Content will be loaded here dynamically -->
+  </div>
+<br>
       <h2><u>Typical Air Calculations</u></h2>
       <div class="outline">
           <br>
